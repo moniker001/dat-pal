@@ -1,4 +1,4 @@
-# Dat-Palldio
+# Dat-Palladio
 Personal repository for working on RCC dat-palladio project
 ##Objective
 To create a dat backend for Palladio
@@ -38,19 +38,6 @@ endpoint](http://t.co/kFLTs4W0Lp) (e.g, `http://ws.rcc.uchicago.edu/sample/api/c
 
 For some additional context, see our [exchange](https://twitter.com/joyrexus/status/504376293408768000) with the lead developers of Palladio and Dat.
 
-
-
-## People
-
-* TJ (student lead)
-* Jason (consulting)
-
-
-## Status
-
-Yet to begin.
-
-
 ## Resources
 
 * [Palladio](http://palladio.designhumanities.org)
@@ -70,3 +57,5 @@ Yet to begin.
     * [Example](http://usgs-earthquakes.herokuapp.com/) - example of REST API
       serving up 
       [USGS earthquake data](https://github.com/maxogden/dat-usgs-earthquakes).
+
+*README copied from RCC Dat-Palladio README
