@@ -1,7 +1,7 @@
 var fs = require('fs'),
     dat = require('dat'),
     db = dat(csvpipe),
-    file = 'cities.csv'; // name of csv file with dataset
+    file = 'testfile.csv'; // name of csv file with dataset
 
 function csvpipe(err, test) {
     console.log('test');
