@@ -1,29 +1,26 @@
-var fs = require('fs');
-var dat = require('dat');
-var db = dat('./test', ready); // dat([path], [options], [onReady])
+var fs = require('fs'),
+    dat = require('dat'),
+    parse = require('minimist'),
+    db = dat(csvpipe);
 
-var file = 'cities.csv';
-console.log("Hello World");
+var argOptions = {
+    alias: {
+        data: 'f'
+    },
+    "default": {
+        data: 'test.csv'
+    }
+}
 
-function ready(err) {
+var argv = parse(process.argv.slice(1), argOptions);
+var file = "./csvdata/" + argv.data;
 
-//    for () {
-        db.put('test', done);
-        db.get('test', function(err, test) {
-            if (err) return console.error('Bob is not in this dat', err);
-            
-            var filedata = fs.createReadStream(file);
-            var writeStream = db.createWriteStream('testdata', test, {format: 'csv'});
-            
-            filedata.pipe(writeStream);
-        });
-
-//    }
-    
+function csvpipe(err, test) {
+    if (err) return console.error('Error in csvpipe', err);
+    var filedata = fs.createReadStream(file, { format: 'csv' });
+    var writeStream = db.createWriteStream({ format: 'csv' });
+    filedata.pipe(writeStream);
     console.log('All entries stored!');
 };
 
-function done(err, row) {
-    if (err) return console.error('ERROR: Could not store entry.', err);
-    console.log('Stored entry!', row);
-};
+
