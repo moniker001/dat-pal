@@ -20,7 +20,7 @@ As of now, a user is able to store data from a csv file into a dat datastore.
 npm install
 ```
 
-2) This command stores the data into a dat datastore. Use the command option ```-f``` to specify the filename. The file must be a csv file and be contained in the directory `csvdata`.
+2) This command stores the data into a dat datastore. Use the command option ```-f``` to specify the filename with the extension included. The file must be a csv file and be contained in the directory `csvdata`.
 
 ```
 node main.js [-f] [filename.csv]
