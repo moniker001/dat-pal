@@ -1,9 +1,40 @@
 # Dat-Palladio
 Personal repository for working on RCC dat-palladio project
-##Objective
-To create a dat backend for Palladio
 
-## Task Description
+## Objective
+To create a dat backend for Palladio.
+
+## Progress
+
+* import into Dat (done!)
+* expose via Dat REST API (in progress)
+* import into Palladio (in progress)
+
+As of now, a user is able to store data from a csv file into a dat datastore.
+
+## Instructions
+
+1) First, install the dependencies, namely the npm modules [Minimist](https://github.com/substack/minimist) and [Dat](https://github.com/maxogden/dat).
+
+```
+npm install
+```
+
+2) This command stores the data into a dat datastore. Use the command option ```-f``` to specify the filename. The file must be a csv file and be contained in the directory `csvdata`.
+
+```
+node main.js [-f] [filename.csv]
+```
+
+3) Optionally, you can view the stored data with this command. More console commands for Dat can be found [here](https://github.com/maxogden/dat/blob/master/docs/cli-usage.md).
+
+```
+dat cat
+```
+
+## Readme Information from RCC [Dat-Palladio](https://github.com/rcc-uchicago/dat-palladio) Repository
+
+### Task Description
 
 [Palladio](http://palladio.designhumanities.org) is a visualization framework for exploratory data analysis on tabular data.  It was developed primarily for researchers in the humanities and social-sciences working with collections of spatio-temporal data.
 
@@ -57,5 +88,3 @@ For some additional context, see our [exchange](https://twitter.com/joyrexus/sta
     * [Example](http://usgs-earthquakes.herokuapp.com/) - example of REST API
       serving up 
       [USGS earthquake data](https://github.com/maxogden/dat-usgs-earthquakes).
-
-*README copied from RCC Dat-Palladio README
