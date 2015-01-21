@@ -1,8 +1,15 @@
+//-----------------------------------------------------------------------------
+// Host and port configuration
+var host = '127.0.0.1'  // midway-login2 is 128.135.112.72
+var port = 8000
+//-----------------------------------------------------------------------------
+
 var submitFunc = function () {
   var url = document.getElementById('url');
   var display = document.getElementById('display');
   display.innerHTML = url.value;
   if (url.value) {
+      sendForm();
       msg.style.color = 'green';		
       msg.innerHTML = "Submitted!";
   } else {
@@ -21,7 +28,7 @@ var clearFunc = function () {
 
 var sendForm = function () { // Send form data to server
     var formData = new FormData();
-    var url = document.getElementById('firstname').value;
+    var url = document.getElementById('data').value;
     formData.append('url', url);
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://'+host+':'+port+'/dat/csv', true);
@@ -46,7 +53,7 @@ var argOptions = {
 };
 
 var argv = parse(process.argv.slice(1), argOptions);
-var file = "./csvdata/" + argv.data;
+var file = "../csvdata/" + argv.data;
 
 var csvpipe = function (err, test) {
     if (err) return console.error('Error in csvpipe', err);
