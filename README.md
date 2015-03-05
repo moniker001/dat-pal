@@ -6,9 +6,11 @@ To create a dat backend for Palladio.
 
 ## Example with Cushman Photos
 
-This is a walkthrough example of importing a csv file into a dat datastore and then exposing it to Palladio. We will use the metadata for the [Cushman photos](https://github.com/iulibdcs/cushman_photos). A properly formatted version of the csv file can be found in our [cushman directory](https://github.com/moniker001/dat-pal/tree/master/cushman).
+This is a walkthrough example of importing a csv file into a dat datastore and then exposing it to Palladio. We will use the metadata for the [Cushman photos](https://github.com/iulibdcs/cushman_photos). A properly formatted version of the csv file can be found in our `cushman` [directory](https://github.com/moniker001/dat-pal/tree/master/cushman).
 
 Metadata from the [Charles W. Cushman Photograph Collection](http://webapp1.dlib.indiana.edu/cushman/), licensed under [CC BY](http://creativecommons.org/licenses/by/4.0/deed.en_US), was created under the direction of the Indiana University Archives and published by the Indiana University Libraries.
+
+The data may need to be reformatted for easier use and compatibility with features in Palladio. For this reason, we have included two versions of the data. `cushman.csv` contains the original data and `cushman2.csv` is the reformatted version. For this example, we will use `cushman1.csv`.
 
 One could either use the bash script or manually run each step as outlined below. Either method will initiate the dat store, import the csv file, and start the dat server to expose the endpoint.
 
@@ -18,7 +20,7 @@ Simply change to the cushman directory and run the script with the csv file name
 
 ```
 cd cushman
-./datpal.sh cushman
+./datpal.sh cushman2
 ```
 
 ####To run manually
