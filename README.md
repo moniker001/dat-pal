@@ -41,7 +41,7 @@ dat listen
 
 5) On the [Palladio website](http://palladio.designhumanities.org/), select "Start" and then the "Load Spreadsheet or CSV" tab. Paste in the endpoint url ([http://localhost:6461/api/csv](http://localhost:6461/api/csv)) and select "Load".
 
-![Palladio upload demo](https://github.com/moniker001/dat-pal/blob/master/cushman/resources/palladiodemo.png)
+![Palladio upload demo](https://github.com/moniker001/dat-pal/blob/master/resources/palladiodemo.png)
 
 6) You can then use the various features of Palladio with the data.
 
