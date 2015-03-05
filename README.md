@@ -18,6 +18,19 @@ This is a walkthrough example of importing a csv file into a dat datastore and t
 
 Metadata from the [Charles W. Cushman Photograph Collection](http://webapp1.dlib.indiana.edu/cushman/), licensed under [CC BY](http://creativecommons.org/licenses/by/4.0/deed.en_US), was created under the direction of the Indiana University Archives and published by the Indiana University Libraries.
 
+One could either use the bash script or manually run each step as outlined below. Either method will initiate the dat store, import the csv file, and start the dat server to expose the endpoint.
+
+####To run bash script
+
+Simply change to the cushman directory and run the script with the csv file name as an argument.
+
+```
+cd cushman
+./datpal.sh cushman
+```
+
+####To run manually
+
 1) Change to the cushman directory and initiate the dat store.
 
 ```
@@ -37,33 +50,16 @@ dat import --csv cushman.csv
 dat listen
 ```
 
-4) The dat store can now be viewed at [http://localhost:6461](http://localhost:6461). The dat store can also be streamed as a csv with the endpoint [http://localhost:6461/api/csv](http://localhost:6461/api/csv).
+####After the dat server is running
 
-5) On the [Palladio website](http://palladio.designhumanities.org/), select "Start" and then the "Load Spreadsheet or CSV" tab. Paste in the endpoint url ([http://localhost:6461/api/csv](http://localhost:6461/api/csv)) and select "Load".
+The dat store can now be viewed at [http://localhost:6461](http://localhost:6461). The dat store can also be streamed as a csv with the endpoint [http://localhost:6461/api/csv](http://localhost:6461/api/csv).
+
+On the [Palladio website](http://palladio.designhumanities.org/), select "Start" and then the "Load Spreadsheet or CSV" tab. Paste in the endpoint url ([http://localhost:6461/api/csv](http://localhost:6461/api/csv)) and select "Load".
 
 ![Palladio upload demo](https://github.com/moniker001/dat-pal/blob/master/resources/palladiodemo.png)
 
-6) You can then use the various features of Palladio with the data.
+You can then use the various features of Palladio with the data.
 
-## Instructions
-
-1) First, install the dependencies, namely the npm modules [Minimist](https://github.com/substack/minimist) and [Dat](https://github.com/maxogden/dat).
-
-```
-npm install
-```
-
-2) This command stores the data into a dat datastore. Use the command option ```-f``` to specify the filename with the extension included. The file must be a csv file and be contained in the directory `csvdata`.
-
-```
-node main.js [-f] [filename.csv]
-```
-
-3) Optionally, you can view the stored data with this command. More console commands for Dat can be found [here](https://github.com/maxogden/dat/blob/master/docs/cli-usage.md).
-
-```
-dat cat
-```
 
 ## Readme Information from RCC [Dat-Palladio](https://github.com/rcc-uchicago/dat-palladio) Repository
 
