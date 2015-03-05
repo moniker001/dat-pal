@@ -14,7 +14,7 @@ One could either use the bash script or manually run each step as outlined below
 
 ####To run bash script
 
-Simply change to the cushman directory and run the script with the csv file name as an argument.
+Simply change to the cushman directory and run the script with the csv file name as an argument without the extension.
 
 ```
 cd cushman
