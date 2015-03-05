@@ -12,6 +12,37 @@ To create a dat backend for Palladio.
 
 As of now, a user is able to store data from a csv file into a dat datastore.
 
+## Example with Cushman Photos
+
+This is a walkthrough example of importing a csv file into a dat datastore and then exposing it to Palladio. We will use the metadata for the [Cushman photos](https://github.com/iulibdcs/cushman_photos). A properly formatted version of the csv file can be found in our [cushman directory](https://github.com/moniker001/dat-pal/tree/master/cushman).
+
+Metadata from the [Charles W. Cushman Photograph Collection](http://webapp1.dlib.indiana.edu/cushman/), licensed under [CC BY](http://creativecommons.org/licenses/by/4.0/deed.en_US), was created under the direction of the Indiana University Archives and published by the Indiana University Libraries.
+
+1) Change to the cushman directory and initiate the dat store.
+
+```
+cd cushman
+dat init
+```
+
+2) Import the csv file with the following command.
+
+```
+dat import --csv cushman.csv
+```
+
+3) Start the dat server to expose the dat store.
+
+```
+dat listen
+```
+
+4) The dat store can now be viewed at [http://localhost:6461](http://localhost:6461). The dat store can also be streamed as a csv with the endpoint [http://localhost:6461/api/csv](http://localhost:6461/api/csv).
+
+5) On the [Palladio website](http://palladio.designhumanities.org/), select "Start" and then the "Load Spreadsheet or CSV" tab. Paste in the endpoint url ([http://localhost:6461/api/csv](http://localhost:6461/api/csv)) and select "Load".
+
+![Palladio upload demo]()
+
 ## Instructions
 
 1) First, install the dependencies, namely the npm modules [Minimist](https://github.com/substack/minimist) and [Dat](https://github.com/maxogden/dat).
