@@ -10,7 +10,7 @@ This is a walkthrough example of importing a csv file into a dat datastore and t
 
 Metadata from the [Charles W. Cushman Photograph Collection](http://webapp1.dlib.indiana.edu/cushman/), licensed under [CC BY](http://creativecommons.org/licenses/by/4.0/deed.en_US), was created under the direction of the Indiana University Archives and published by the Indiana University Libraries.
 
-The data may need to be reformatted for easier use and compatibility with features in Palladio. For this reason, we have included two versions of the data. `cushman.csv` contains the original data and `cushman2.csv` is the reformatted version. For this example, we will use `cushman1.csv`.
+The data may need to be reformatted for easier use and compatibility with features in Palladio. For this reason, we have included two versions of the data. `cushman.csv` contains the original data and `cushman2.csv` is the reformatted version. For this example, we will use `cushman2.csv`.
 
 One could either use the bash script or manually run each step as outlined below. Either method will initiate the dat store, import the csv file, and start the dat server to expose the endpoint.
 
@@ -35,7 +35,7 @@ dat init
 2) Import the csv file with the following command.
 
 ```
-dat import --csv cushman.csv
+dat import --csv cushman2.csv
 ```
 
 3) Start the dat server to expose the dat store.
