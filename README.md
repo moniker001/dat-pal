@@ -25,7 +25,7 @@ cd cushman
 
 ####To run manually
 
-1) Change to the cushman directory and initiate the dat store.
+1) Alternatively to running the bash script, change to the cushman directory and initiate the dat store.
 
 ```
 cd cushman
@@ -51,6 +51,15 @@ The dat store can now be viewed at [http://localhost:6461](http://localhost:6461
 On the [Palladio website](http://palladio.designhumanities.org/), select "Start" and then the "Load Spreadsheet or CSV" tab. Paste in the endpoint url ([http://localhost:6461/api/csv](http://localhost:6461/api/csv)) and select "Load".
 
 ![Palladio upload demo](https://github.com/moniker001/dat-pal/blob/master/resources/palladiodemo.png)
+
+####Formatting data
+
+Before using Palladio features, the data must be in the correct format. Some of the data categories in our example must be formatted first. Palladio does not always recognize the type of data for a data category right away, in which case the user must tell Palldio the type and format the data to match the corresponding type as Palladio recognizes it.
+
+For example, one of the data categories in our imported Cushman data is a date. The data must have its type specified and be formatted correctly as described below:
+
+1) Click on the Review button next to the Date category.
+
 
 You can then use the various features of Palladio with the data.
 
