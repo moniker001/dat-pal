@@ -12,9 +12,15 @@ Metadata from the [Charles W. Cushman Photograph Collection](http://webapp1.dlib
 
 The data may need to be reformatted for easier use and compatibility with features in Palladio. For this reason, we have included two versions of the data. `cushman.csv` contains the original data and `cushman2.csv` is the reformatted version. For this example, we will use `cushman2.csv`.
 
+####Install Dat
+
+First, install Dat as described in the [Dat GitHub respository](https://github.com/maxogden/dat). This requires the installation of node version 0.10 beforehand.
+
+####Import data
+
 One could either use the bash script or manually run each step as outlined below. Either method will initiate the dat store, import the csv file, and start the dat server to expose the endpoint.
 
-####To run bash script
+#####To run bash script
 
 Simply change to the cushman directory and run the script with the csv file name as an argument without the extension.
 
@@ -23,7 +29,7 @@ cd cushman
 ./datpal.sh cushman2
 ```
 
-####To run manually
+#####To run manually
 
 1) Alternatively to running the bash script, change to the cushman directory and initiate the dat store.
 
@@ -70,11 +76,14 @@ T00:00:00Z
 
 3) In the **Data type** dropdown menu, select the option **Year or Date (YYYY-MM-DD)**. Then close the window.
 
+![Format date](http://miriamposner.com/blog/wp-content/uploads/2014/11/media_1416796422140.png)
+
 #####Coordinate format
 
 Although the coordinate data under the data category **Geocoordinates** in cushman2.csv is in the correct format, this may not always be the case with a given dataset. Coordinate data must always be formatted as latitude then longitude, separated by a comma. An example is **41.7897, 87.5997**.
 
 One can use geocoding web sites to find coordinate information for given location names.
+
 
 ####Using the data with Palladio features
 
@@ -89,6 +98,8 @@ The coordinate data can be used to map points on a map.
 1) Select the **Map** tab at the top of the window.
 
 2) In the **Places** dropdown window, select **Geocoordinates**.
+
+![Map data](http://miriamposner.com/blog/wp-content/uploads/2014/11/media_1416796647906.png)
 
 #####Combine map with timeline
 
