@@ -58,7 +58,7 @@ Before using Palladio features, the data must be in the correct format. Some of 
 
 #####Date format
 
-For example, one of the data categories in our imported Cushman data is a date. The data must have its type specified and be formatted correctly as described below:
+For example, one of the data categories in our imported Cushman data is a date. Dates should follow the Year-Month-Day format where Year is always a four-digit integers, while the Month and Day are always two-digit integers. It is also possible to have negative dates, which simple are preceded by a minus sign. An example is **2015-01-01**. The dates in the Cushman data must have its type specified and can be formatted correctly as described below:
 
 1) Click on the **Review** button next to the **Date** category.
 
@@ -70,10 +70,46 @@ T00:00:00Z
 
 3) In the **Data type** dropdown menu, select the option **Year or Date (YYYY-MM-DD)**. Then close the window.
 
-You can then use the various features of Palladio with the data.
+#####Coordinate format
 
+Although the coordinate data under the data category **Geocoordinates** in cushman2.csv is in the correct format, this may not always be the case with a given dataset. Coordinate data must always be formatted as latitude then longitude, separated by a comma. An example is **41.7897, 87.5997**.
+
+One can use geocoding web sites to find coordinate information for given location names.
+
+####Using the data with Palladio features
+
+Finally, you can now use the various features of Palladio with the correctly imported, correctly formatted data. There are several features, but we will cover only a few examples with our Cushman data.
+
+For more information on what Palladio can do with data, see the [Getting started with Palladio](http://miriamposner.com/blog/getting-started-with-palladio/) tutorial.
+
+#####Mapping
+
+The coordinate data can be used to map points on a map.
+
+1) Select the **Map** tab at the top of the window.
+
+2) In the **Places** dropdown window, select **Geocoordinates**.
+
+#####Combine map with timeline
+
+The map can also be combined with a timeline to show the distribution of the data over time. Hovering over the columns in the resulting graph gives more information.
+
+1) While viewing the map, select the **Timeline** tab at the bottom of the window.
+
+2) In the **Group by** dropdown window, specify that you wish to group your data by **Genre 1** or **Genre 2**.
+
+#####Filter by date
+
+The data can also be filtered based on time. Here is an example to filter out all years except 1940 to 1942.
+
+1) After mapping and creating the timeline, use the crosshairs to drag from the year 1940 to 1942. A blue box will appear over the selected date range. The map will also update to match the selected date range.
+
+2) To zoom in on the selected date range, select **Zoom to filter** at the bottom of the window.
+
+3) To remove the date filter, click on the "x" next to the date range above the graph.
 
 ## Resources
 * [Dat-Palladio](https://github.com/rcc-uchicago/dat-palladio)
 * [Palladio](http://palladio.designhumanities.org) 
 * [Dat](http://dat-data.com/)
+* [Getting started with Palladio](http://miriamposner.com/blog/getting-started-with-palladio/)
