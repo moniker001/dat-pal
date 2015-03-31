@@ -56,10 +56,19 @@ On the [Palladio website](http://palladio.designhumanities.org/), select "Start"
 
 Before using Palladio features, the data must be in the correct format. Some of the data categories in our example must be formatted first. Palladio does not always recognize the type of data for a data category right away, in which case the user must tell Palldio the type and format the data to match the corresponding type as Palladio recognizes it.
 
+#####Date format
+
 For example, one of the data categories in our imported Cushman data is a date. The data must have its type specified and be formatted correctly as described below:
 
-1) Click on the Review button next to the Date category.
+1) Click on the **Review** button next to the **Date** category.
 
+2) We need to edit this data by removing extra characters. In the **Remove the following strings** field, enter the following:
+
+```
+T00:00:00Z
+```
+
+3) In the **Data type** dropdown menu, select the option **Year or Date (YYYY-MM-DD)**. Then close the window.
 
 You can then use the various features of Palladio with the data.
 
