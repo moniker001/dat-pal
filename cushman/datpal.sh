@@ -5,8 +5,8 @@
 
 dat init
 echo Initiated dat store
-dat import --csv $1.csv
-echo Imported $1.csv
+dat import --csv $1
+echo Imported $1
 echo Starting dat server...
 dat listen
 
